@@ -1,0 +1,52 @@
+{
+  "name": "realtimechatapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
+  },
+  "dependencies": {
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/platform-server": "^5.0.0",
+    "@angular/router": "^5.0.0",
+    "@angular/upgrade": "^5.0.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.4.1",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "hbs": "~3.1.0",
+    "morgan": "~1.6.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "^5.5.0",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "@ngtools/webpack": "^1.8.0",
+    "@types/core-js": "0.9.36",
+    "@types/node": "^6.0.45",
+    "angular-router-loader": "^0.5.0",
+    "angular2-template-loader": "^0.5.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "del-cli": "^0.2.0",
+    "html-loader": "^0.4.4",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.4.2",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
